@@ -9,43 +9,59 @@
 <body>
     <header>
         <h1>Community Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#types">Types of Communities</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#get-involved">Get Involved</a></li>
-            </ul>
-        </nav>
+        <h2>This is the deveolpment of a wind farm in your area:</h2>
+
     </header>
 
     <main>
-        <section id="about">
-            <h2>About Community Hub</h2>
-            <p>Community Hub is a platform dedicated to fostering and celebrating diverse communities. We believe in the power of connection and shared experiences to create positive change.</p>
-        </section>
+    <h2>Data Entry Form</h2>
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="120"><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
 
-        <section id="types">
-            <h2>Types of Communities</h2>
-            <ul>
-                <li>Neighborhood Associations</li>
-                <li>Online Interest Groups</li>
-                <li>Professional Networks</li>
-                <li>Cultural Organizations</li>
-                <li>Environmental Initiatives</li>
-                <li>Support Groups</li>
-            </ul>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting
+
+            // Get input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+
+            // Create output string
+            const output = `
+                <h3>Entered Data:</h3>
+                <p>Name: ${name}</p>
+                <p>Email: ${email}</p>
+                <p>Age: ${age}</p>
+            `;
+
+            // Display output
+            document.getElementById('output').innerHTML = output;
+
+            // Optional: Clear form fields
+            this.reset();
+        });
+    </script>
+
+
+        <section id="Impact">
+            <h2>Environmental Impact</h2>
         </section>
 
         <section id="benefits">
-            <h2>Benefits of Community Involvement</h2>
-            <ol>
-                <li>Sense of Belonging</li>
-                <li>Personal Growth</li>
-                <li>Networking Opportunities</li>
-                <li>Skill Development</li>
-                <li>Positive Impact on Society</li>
-            </ol>
+            <h2>Economic Benefits</h2>
         </section>
     </main>
 
