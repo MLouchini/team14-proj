@@ -1,0 +1,13 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", "sans-serif";
+  }
+  .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9,30, 0.7)), url(https://t4.ftcdn.net/jpg/06/28/34/57/360_F_628345798_XrRzoeqTgvvxdemhRoZN3fiuu3q0f6BL.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
