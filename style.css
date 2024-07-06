@@ -6,8 +6,7 @@ html {
   .header{
     min-height: 100vh;
     width: 100%;
-    background-color: #c3c0f0;
-    background: rgb(168, 197, 239);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9,30, 0.7)), url(images/wind-turbine-small.jpg);
     background-position: bottom;
     background-size: cover;
     position: relative;
