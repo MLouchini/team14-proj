@@ -1,57 +1,31 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #ddd;
-}
-
-main {
+.container {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
 
-section {
+.info-box {
+    width: 30%;
+}
+
+.environmental-impact, .economic-benefits {
     margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-h2 {
-    color: #333;
+#impact-score, #money-saved {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.map-container {
+    width: 65%;
+    height: 500px;
 }

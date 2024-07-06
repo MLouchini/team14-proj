@@ -3,67 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Wind Farm Development</title>
+    <link rel="stylesheet" href="Community.css">
+    <script src="Community.js"></script>
+
 </head>
 <body>
-    <header>
-        <h1>Community Hub</h1>
-        <h2>This is the deveolpment of a wind farm in your area:</h2>
-
-    </header>
-
-    <main>
-    <h2>Data Entry Form</h2>
-    <form id="dataForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="0" max="120"><br><br>
-        
-        <button type="submit">Submit</button>
-    </form>
-
-    <div id="output"></div>
-
-    <script>
-        document.getElementById('dataForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form from submitting
-
-            // Get input values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const age = document.getElementById('age').value;
-
-            // Create output string
-            const output = `
-                <h3>Entered Data:</h3>
-                <p>Name: ${name}</p>
-                <p>Email: ${email}</p>
-                <p>Age: ${age}</p>
-            `;
-
-            // Display output
-            document.getElementById('output').innerHTML = output;
-
-            // Optional: Clear form fields
-            this.reset();
-        });
-    </script>
-
-
-        <section id="Impact">
-            <h2>Environmental Impact</h2>
-        </section>
-
-        <section id="benefits">
-            <h2>Economic Benefits</h2>
-        </section>
-    </main>
-
+    <div class="container">
+        <div class="info-box">
+            <div class="environmental-impact">
+                <h2>Environmental Impact Score</h2>
+                <div id="impact-score">Loading...</div>
+                <ul>
+                    <li>Local wildlife may be disrupted</li>
+                    <li>Area has low levels of wildlife</li>
+                </ul>
+            </div>
+            <div class="economic-benefits">
+                <h2>Economic Benefits</h2>
+                <p>You will save</p>
+                <div id="money-saved">Loading...</div>
+                <p>in energy costs due to the development</p>
+            </div>
+        </div>
+        <div class="map-container" id="map"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=myapikey&callback=initMap" async defer></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
